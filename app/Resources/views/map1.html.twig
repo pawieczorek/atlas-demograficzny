@@ -1,0 +1,203 @@
+﻿<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/datatables.min.css') }}" />
+
+{% block javascripts %}
+        <script src="{{ asset('js/jquery-3.1.1.js') }}"></script>
+		<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+		<script src="{{ asset('js/datatables.min.js') }}"></script>
+        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+        <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+{% endblock %}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+	<title>{{country.name}}</title>
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+	<style>
+      
+	#map  
+		{
+		height: 400px;
+		margin: 20px;
+		} 
+
+	a:hover 
+		{
+		cursor:pointer;
+		}
+	  
+   
+    </style>
+	
+	<script type="text/javascript" charset="utf-8">
+			
+			$(document).ready(function() 
+					{
+					$('#table').DataTable( 
+							{
+							"pagingType": "simple",
+							"info": true,
+							language: 
+									{
+									"processing":     "Przetwarzanie...",
+									"search":         "Szukaj:",
+									"lengthMenu":     "Pokaż _MENU_ pozycji",
+									"info":           "od _START_ do _END_ z _TOTAL_",
+									"infoEmpty":      "Pozycji 0 z 0 dostępnych",
+									"infoFiltered":   "(filtrowanie spośród _MAX_ dostępnych pozycji)",
+									"infoPostFix":    "",
+									"loadingRecords": "Wczytywanie...",
+									"zeroRecords":    "Nie znaleziono pasujących pozycji",
+									"emptyTable":     "Brak danych",
+									"paginate": {
+										"first":      "pierwsza",
+										"previous":   "poprzednia",
+										"next":       "następna",
+										"last":       "ostatnia"
+									},	
+							
+									"aria": {
+										"sortAscending": ": aktywuj, by posortować kolumnę rosnąco",
+										"sortDescending": ": aktywuj, by posortować kolumnę malejąco"
+									}
+									}
+							} );
+					} );	
+		
+		</script>
+	
+</head>
+<body>
+
+
+<div class="container">
+	
+		<div class="row">
+		
+				<div class="col-md-12">
+				<p class="h4 well well-sm">MINI ATLAS MIAST - {{country.name|upper}}     <small> {{country.comment}}</small></p>
+				</div>
+				
+		</div>
+
+
+		<div class="row">
+		
+				<div class="col-md-9" id="map"></div>
+				
+				<div class="col-md-2" >
+				
+					<img src="{{ asset('images/legend.jpg') }}" class="img-fluid" alt="Responsive image" style="margin:20px">
+				
+				</div>
+		</div>
+
+
+		<div class="row">
+		
+				<div class="col-md-4">
+		  
+					<small>Wyszukiwanie z ustalonym zakresem</small>
+					<div class="btn-group-vertical">
+					<button type="button" class="btn btn-primary" onclick="buttonPressed('1','{{country.name}}','{{country.lat}}','{{country.lng}}','{{country.zoom}}','{{country.entity}}');">Miasta z liczbą mieszkańców &nbsp&nbsp&nbsp>100000</button>
+					<button type="button" class="btn btn-primary" onclick="buttonPressed('2','{{country.name}}','{{country.lat}}','{{country.lng}}','{{country.zoom}}','{{country.entity}}');">Miasta z liczbą mieszkańców &nbsp&nbsp&nbsp>200000</button>
+					<button type="button" class="btn btn-primary" onclick="buttonPressed('5','{{country.name}}','{{country.lat}}','{{country.lng}}','{{country.zoom}}','{{country.entity}}');">Miasta z liczbą mieszkańców &nbsp&nbsp&nbsp>500000</button>
+					</div>
+			
+				</div>
+
+				<div class="col-md-2">
+				
+					</br>
+					</br>
+					<i id="loader1" class="fa fa-refresh fa-spin" style="font-size:24px"></i>
+				
+				</div>
+
+
+				<div class="col-md-3">
+				
+					<small>Wyszukiwanie z zakresem do wyboru</small>
+					<div class="form_error"></div>
+					<form method="POST" class="ajaxForm" action="{{path('firstAction')}}" {{ form_enctype(form) }}>
+						<input type="hidden" name="countryentity" value={{country.entity}}>
+						<div id="form_body">
+							{% include 'form.html.twig' with {'form': form} %}
+						</div> 
+						<button type="submit" class="btn btn-primary">wyszukaj</button>
+						{{ form_end(form) }}
+					</form>
+
+				</div>
+			
+				<div class="col-md-3">
+				
+					</br>
+					</br>
+					<i id="loader2" class="fa fa-refresh fa-spin" style="font-size:24px"></i>
+					
+				</div> 
+			
+			
+		</div>		
+	
+		
+		<div class="row">
+
+
+				<div class="col-md-5">
+						
+					<div id="wyniki">
+						<table id="table" class="small table table-striped">
+							<thead id="thead1">
+								<tr>
+									<th>Miasto</th>
+									<th>Populacja</th>
+									<th>Mapa</th>	
+								</tr>
+							</thead>
+							<tbody  id="tbody1">						
+							</tbody>
+												
+						</table>
+						<p>&nbsp</p>
+					</div>
+				</div>		
+							
+				
+				<div class="col-md-1">
+				
+					</br>
+					</br>
+					<i id="loader3" class="fa fa-refresh fa-spin" style="font-size:24px"></i>
+							
+				</div>
+				
+				
+				<div class="col-md-6">
+				
+					<p id="notka"><strong>Notka z Dbpedii</strong></p>
+					<p id="opis"></p>
+					</br>
+					
+				</div>	
+
+		</div>
+		
+</div>	
+
+{{ google_map1() }}
+
+
+<script src="{{ asset('js/addMarkers.js') }}"></script>
+
+</body>
+</html>

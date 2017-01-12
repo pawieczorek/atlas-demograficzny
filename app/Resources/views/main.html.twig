@@ -1,0 +1,80 @@
+{% stylesheets
+    'css/bootstrap.min.css'
+    'css/main.css'
+    filter='cssrewrite' output='css/compiled/app.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+
+
+
+<html>
+    <head>
+        <title>Atlas</title>
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>	
+	<style>
+      body{
+
+      float:center;
+      margin:auto;
+      width:700px;
+      background-color:white;
+      //font-family: 'Oswald', sans-serif; 
+      }
+	  
+	  h5 {
+	  
+	  background-color:black;
+	  color: white;
+	  }
+	  
+</style>	
+		
+		
+		
+    </head>
+    <body>
+	<p>&nbsp</p>
+	<div>
+	<h2 class="alert alert-info" >ATLAS DEMOGRAFICZNY</h2>
+    <p>&nbsp</p>
+	<p>&nbsp</p>
+	<p>&nbsp</p>		
+			
+			<h4>DOTYCHCZAS PRZYGOTOWANE MAPY:</h4>
+			
+			<p>&nbsp</p>
+			<div class="well">
+			<span><a href="{{ path('poland') }}" target="_blank" class="btn btn-primary">Polska</a></span>
+			<span>&nbsp&nbsp&nbsp&nbsp</span>
+			<span><a href="{{ path('uk') }}" target="_blank" class="btn btn-primary">Wielka Brytania</a></span> 
+			<span>&nbsp&nbsp&nbsp&nbsp</span>
+			<span><a href="{{ path('us') }}" target="_blank" class="btn btn-primary">USA</a></span>
+			</div>
+			<p>&nbsp</p>
+			<p>&nbsp</p>
+			
+			
+			<h4>PROJEKT ZREALIZOWANY PRZY POMOCY TECHNOLOGII I BIBLOTEK:</h4>
+			
+			<p>&nbsp</p>
+			<p class="well">HTML5, CSS, PHP, JavaScript, JQuery, Bootstrap, Google Maps API, Dbpedia, DataTables, framework SYMFONY2.
+			</br>Źródła danych: oficjalne urzędy statystyczne poszczególnych państw.</p>
+			<p>&nbsp</p>
+			
+			<p>&nbsp</p>
+			<p>P.Wieczorek 2016</p>
+			<p>&nbsp</p>
+			
+			
+    </div>   
+         
+    </body>
+    
+</html>
+{% javascripts
+    'js/jquery-3.1.1.js'
+    'js/bootstrap.min.js'
+    output='js/compiled/app.js' %}
+    <script src="{{ asset_url }}"></script>
+{% endjavascripts %}

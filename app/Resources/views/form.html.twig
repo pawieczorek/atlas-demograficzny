@@ -1,0 +1,16 @@
+<div>
+    <div>
+        
+        <div class="bg-danger">{{ form_errors(form.maxNumber) }}</div>
+        <div class="form-group input-group">
+            {{ form_widget(form.maxNumber,  {'attr': {'placeholder':'maksimum', 'title':'maxNumber', 'class':'form-control'}}) }}
+			
+        </div>
+    </div>
+    <div >
+        <div class="bg-danger">{{ form_errors(form.minNumber) }}</div>
+        <div class="form-group input-group">
+            {{ form_widget(form.minNumber,  {'attr': {'placeholder':'minimum','title':'minNumber', 'class':'form-control'}}) }}
+        </div>
+    </div>
+</div>

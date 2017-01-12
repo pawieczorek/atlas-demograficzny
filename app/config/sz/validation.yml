@@ -1,0 +1,9 @@
+# src/AppBundle/Resources/config/validation.yml
+AppBundle\Entity\inhabitantsRange:
+    properties:
+        minNumber:
+            - Range:
+                min: 0
+                max: 100
+                minMessage: You must be at least {{ limit }} to enter
+                maxMessage: You cannot be taller than {{ limit }}cm to enter
