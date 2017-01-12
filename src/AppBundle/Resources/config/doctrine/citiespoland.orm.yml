@@ -1,0 +1,19 @@
+AppBundle\Entity\citiespoland:
+    type: entity
+    table: miasta
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        miasto:
+            type: text
+        populacja:
+            type: integer
+        lat:
+            type: decimal
+        lng:
+            type: decimal
+    lifecycleCallbacks: {  }

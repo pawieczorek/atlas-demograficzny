@@ -1,0 +1,184 @@
+<?php $filteredResult = array (
+  0 => 
+  stdClass::__set_state(array(
+     'miasto' => 
+    EasyRdf_Resource::__set_state(array(
+       'uri' => 'http://dbpedia.org/resource/Silesian_Metropolis',
+       'graph' => NULL,
+    )),
+     'ile' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '2039454',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger',
+    )),
+     'lat' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '50.25',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+     'long' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '19.0',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+  )),
+  1 => 
+  stdClass::__set_state(array(
+     'miasto' => 
+    EasyRdf_Resource::__set_state(array(
+       'uri' => 'http://dbpedia.org/resource/Warsaw',
+       'graph' => NULL,
+    )),
+     'ile' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '1740119',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger',
+    )),
+     'lat' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '52.2333',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+     'long' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '21.0167',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+  )),
+  2 => 
+  stdClass::__set_state(array(
+     'miasto' => 
+    EasyRdf_Resource::__set_state(array(
+       'uri' => 'http://dbpedia.org/resource/Kraków',
+       'graph' => NULL,
+    )),
+     'ile' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '761900',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger',
+    )),
+     'lat' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '50.0667',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+     'long' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '19.9333',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+  )),
+  3 => 
+  stdClass::__set_state(array(
+     'miasto' => 
+    EasyRdf_Resource::__set_state(array(
+       'uri' => 'http://dbpedia.org/resource/Tricity,_Poland',
+       'graph' => NULL,
+    )),
+     'ile' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '748126',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger',
+    )),
+     'lat' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '54.4333',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+     'long' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '18.55',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+  )),
+  4 => 
+  stdClass::__set_state(array(
+     'miasto' => 
+    EasyRdf_Resource::__set_state(array(
+       'uri' => 'http://dbpedia.org/resource/Łódź',
+       'graph' => NULL,
+    )),
+     'ile' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '715360',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger',
+    )),
+     'lat' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '51.7833',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+     'long' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '19.4667',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+  )),
+  5 => 
+  stdClass::__set_state(array(
+     'miasto' => 
+    EasyRdf_Resource::__set_state(array(
+       'uri' => 'http://dbpedia.org/resource/Wrocław',
+       'graph' => NULL,
+    )),
+     'ile' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '634487',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger',
+    )),
+     'lat' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '51.1',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+     'long' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '17.0333',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+  )),
+  6 => 
+  stdClass::__set_state(array(
+     'miasto' => 
+    EasyRdf_Resource::__set_state(array(
+       'uri' => 'http://dbpedia.org/resource/Poznań',
+       'graph' => NULL,
+    )),
+     'ile' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '551627',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger',
+    )),
+     'lat' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '52.4',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+     'long' => 
+    EasyRdf_Literal::__set_state(array(
+       'value' => '16.9167',
+       'lang' => NULL,
+       'datatype' => 'http://www.w3.org/2001/XMLSchema#float',
+    )),
+  )),
+);
