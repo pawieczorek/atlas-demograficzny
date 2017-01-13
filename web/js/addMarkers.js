@@ -34,7 +34,7 @@ function initAjaxForm()
 		{   
 			
 			$("#wyniki").hide();
-		    $("#loader1").hide();
+		        $("#loader1").hide();
 			$("#loader2").hide();
 			$("#loader3").hide();
 			$("#notka").hide();
