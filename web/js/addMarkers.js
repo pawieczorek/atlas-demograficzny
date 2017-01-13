@@ -41,7 +41,14 @@ function initAjaxForm()
 			
 			$('body').on('submit', '.ajaxForm', function (e) 
 					{
+					var countryLat = document.getElementsByName("countryLat")[0].value;
+					var countryLng = document.getElementsByName("countryLng")[0].value;
+					var countryZoom = document.getElementsByName("countryZoom")[0].value;
 					
+					var position = {lat: parseFloat(countryLat), lng: parseFloat(countryLng)};
+						map.setCenter(position);        
+						map.setZoom(parseInt(countryZoom));
+				
 					e.preventDefault();
 					
 					$("#loader2").show();
