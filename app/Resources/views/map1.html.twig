@@ -129,6 +129,9 @@
 					<div class="form_error"></div>
 					<form method="POST" class="ajaxForm" action="{{path('firstAction')}}" {{ form_enctype(form) }}>
 						<input type="hidden" name="countryentity" value={{country.entity}}>
+						<input type="hidden" name="countryLat" value={{country.lat}}>
+						<input type="hidden" name="countryLng" value={{country.lng}}>
+						<input type="hidden" name="countryZoom" value={{country.zoom}}>
 						<div id="form_body">
 							{% include 'form.html.twig' with {'form': form} %}
 						</div> 
